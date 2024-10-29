@@ -1,0 +1,35 @@
+<nav class="bg-accent-black w-full py-4 px-6 min-h-16 flex items-center justify-between flex-wrap text-accent-white">
+    <h1 class="text-3xl">
+        <a [routerLink]="['']" routerLinkActive="router-link-active" class="text-accent-orange font-nunito font-extrabold">
+            <fa-icon [icon]="faUtensils" class="mr-2.5"></fa-icon>
+            Restoran
+        </a>
+    </h1>
+    <button class="border border-white border-opacity-10 py-1 px-3"
+    (click)="toggleMenu()">
+        <fa-icon [icon]="faBars" class="opacity-55 text-white font-extrabold"></fa-icon>
+    </button>
+    <ul *ngIf="isContextMenuOpen" class="w-full pt-2">
+        <li class="py-2.5 border-t border-white border-opacity-10">
+            <a [routerLink]="" routerLinkActive="router-link-active">HOME</a>
+        </li>
+        <li class="py-2.5">
+            <a [routerLink]="" routerLinkActive="router-link-active">ABOUT</a>
+        </li>
+        <li class="py-2.5">
+            <a [routerLink]="" routerLinkActive="router-link-active">SERVICE</a>
+        </li>
+        <li class="py-2.5">
+            <a [routerLink]="" routerLinkActive="router-link-active">MENU</a>
+        </li>
+        <li class="py-2.5">
+            <a [routerLink]="" routerLinkActive="router-link-active">PAGES</a>
+        </li>
+        <li class="py-2.5">
+            <a [routerLink]="" routerLinkActive="router-link-active">CONTACT</a>
+        </li>
+        <li class="py-2.5">
+            <button class="action-button py-2 px-6">BOOK A TABLE</button>
+        </li>
+    </ul>
+</nav>

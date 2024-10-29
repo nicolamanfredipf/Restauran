@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { faUtensils } from '@fortawesome/free-solid-svg-icons';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +8,5 @@ import { faUtensils } from '@fortawesome/free-solid-svg-icons';
 })
 export class AppComponent {
   title = 'Restauran';
-  faUtensils = faUtensils;  // Definisci l'icona come variabile
 
 }
