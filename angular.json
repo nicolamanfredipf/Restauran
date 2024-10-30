@@ -25,9 +25,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css",
-              "https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-            ],
+              "src/styles.css"            ],
             "scripts": []
           },
           "configurations": {
@@ -88,9 +86,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css",
-              "https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-            ],
+              "src/styles.css"            ],
             "scripts": []
           }
         }
