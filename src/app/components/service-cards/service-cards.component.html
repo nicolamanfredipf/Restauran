@@ -1,6 +1,6 @@
 <div class="grid gap-6 m-6 grid-rows-8">
-    <div *ngFor="let service of servicesService.serviceCards; let i = index" 
-    class="flex flex-col items-start row-span-1 gap-2 p-8 cursor-pointer shadow-custom card-active transition-fade-effect"
+    <div #serviceCards *ngFor="let service of servicesService.serviceCards; let i = index" 
+    class="flex flex-col items-start row-span-1 gap-2 p-8 cursor-pointer shadow-custom card-active transition-fade-effect "
     (click)="setActiveCard(i)"
     [ngClass]="{'card-active' : i === activeCardIndex}">
     <fa-icon [icon]="iconsService.getFromName(service.iconName)" 
