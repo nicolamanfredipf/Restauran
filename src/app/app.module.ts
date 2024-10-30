@@ -10,6 +10,7 @@ import { AboutComponent } from './components/pages/about/about.component';
 import { ServiceComponent } from './components/pages/service/service.component';
 import { ServiceCardsComponent } from './components/service-cards/service-cards.component';
 import { PagesHeaderComponent } from './components/pages-header/pages-header.component';
+import { AboutImagesComponent } from './components/about-images/about-images.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { PagesHeaderComponent } from './components/pages-header/pages-header.com
     AboutComponent,
     ServiceComponent,
     ServiceCardsComponent,
-    PagesHeaderComponent
+    PagesHeaderComponent,
+    AboutImagesComponent
   ],
   imports: [
     BrowserModule,
