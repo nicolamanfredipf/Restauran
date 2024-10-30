@@ -1,20 +1,20 @@
-<nav class="bg-accent-black w-full py-4 px-6 min-h-16 flex items-center justify-between flex-wrap text-accent-white">
+<nav class="flex flex-wrap items-center justify-between w-full px-6 py-4 bg-accent-black min-h-16 text-accent-white">
     <h1 class="text-3xl">
-        <a [routerLink]="['']" routerLinkActive="router-link-active" class="text-accent-orange font-nunito font-extrabold">
+        <a [routerLink]="['']" routerLinkActive="router-link-active" class="font-extrabold text-accent-orange font-nunito">
             <fa-icon [icon]="faUtensils" class="mr-2.5"></fa-icon>
             Restoran
         </a>
     </h1>
-    <button class="border border-white border-opacity-10 py-1 px-3"
+    <button class="px-3 py-1 border border-white border-opacity-10"
     (click)="toggleMenu()">
-        <fa-icon [icon]="faBars" class="opacity-55 text-white font-extrabold"></fa-icon>
+        <fa-icon [icon]="faBars" class="font-extrabold text-white opacity-55"></fa-icon>
     </button>
     <ul *ngIf="isContextMenuOpen" class="w-full pt-2">
         <li class="py-2.5 border-t border-white border-opacity-10">
             <a [routerLink]="''" routerLinkActive="router-link-active">HOME</a>
         </li>
         <li class="py-2.5">
-            <a [routerLink]="" routerLinkActive="router-link-active">ABOUT</a>
+            <a [routerLink]="'/about'" routerLinkActive="router-link-active">ABOUT</a>
         </li>
         <li class="py-2.5">
             <a [routerLink]="" routerLinkActive="router-link-active">SERVICE</a>
@@ -29,7 +29,7 @@
             <a [routerLink]="" routerLinkActive="router-link-active">CONTACT</a>
         </li>
         <li class="py-2.5">
-            <button class="action-button py-2 px-6">BOOK A TABLE</button>
+            <button class="px-6 py-2 action-button">BOOK A TABLE</button>
         </li>
     </ul>
 </nav>
