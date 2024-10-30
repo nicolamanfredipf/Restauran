@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { faUtensils } from '@fortawesome/free-solid-svg-icons';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { faUtensils, faBars, faCaretDown } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-navbar',
@@ -10,9 +9,15 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 export class NavbarComponent {
   faUtensils = faUtensils;
   faBars = faBars;
+  faCaretDown = faCaretDown;
   isContextMenuOpen: boolean = false;
+  isPagesDropdownOpen: boolean = false;
   
   toggleMenu(){
     this.isContextMenuOpen = !this.isContextMenuOpen;
+  }
+
+  togglePagesDropdown(){
+    this.isPagesDropdownOpen = !this.isPagesDropdownOpen;
   }
 }

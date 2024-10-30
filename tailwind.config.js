@@ -11,7 +11,8 @@ module.exports = {
       colors: {
         "accent-white": "#F1F8FF",
         "accent-orange": "#FEA116",
-        "accent-black": "#0F172B"
+        "accent-black": "#0F172B",
+        "nav-dropdown-black-text": "#1e2125"
       }
     },
   },
