@@ -41,9 +41,6 @@ export class IconsService {
   }
   
   getFromName(iconName:string):IconProp{
-    console.log(iconName)
-    console.log(faUserTie.iconName)
-
     switch(iconName){
       case faUserTie.iconName:
       return faUserTie;
