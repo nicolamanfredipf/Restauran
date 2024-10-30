@@ -5,9 +5,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { HomeComponent } from './components/home/home.component';
-import { AboutComponent } from './components/about/about.component';
-import { ServiceComponent } from './components/service/service.component';
+import { HomeComponent } from './components/pages/home/home.component';
+import { AboutComponent } from './components/pages/about/about.component';
+import { ServiceComponent } from './components/pages/service/service.component';
+import { ServiceCardsComponent } from './components/service-cards/service-cards.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { ServiceComponent } from './components/service/service.component';
     NavbarComponent,
     HomeComponent,
     AboutComponent,
-    ServiceComponent
+    ServiceComponent,
+    ServiceCardsComponent
   ],
   imports: [
     BrowserModule,
