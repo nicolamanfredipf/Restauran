@@ -1,13 +1,13 @@
 <nav class="flex flex-wrap items-center justify-between w-full px-6 py-4 bg-accent-black min-h-16 text-accent-white">
     <h1 class="text-3xl">
         <a [routerLink]="['']" routerLinkActive="router-link-active" class="font-extrabold text-accent-orange font-nunito">
-            <fa-icon [icon]="faUtensils" class="mr-2.5"></fa-icon>
+            <fa-icon [icon]="iconsService.faUtensils" class="mr-2.5"></fa-icon>
             Restoran
         </a>
     </h1>
     <button class="px-3 py-1 border border-white border-opacity-10"
     (click)="toggleMenu()">
-        <fa-icon [icon]="faBars" class="font-extrabold text-white opacity-55"></fa-icon>
+        <fa-icon [icon]="iconsService.faBars" class="font-extrabold text-white opacity-55"></fa-icon>
     </button>
     <ul *ngIf="isContextMenuOpen" class="w-full pt-2 font-medium">
         <li class="py-2.5 border-t border-white border-opacity-10">
@@ -26,7 +26,7 @@
             <a [routerLink]="'#'" routerLinkActive="text-accent-orange"
             (click)="togglePagesDropdown()">
                 PAGES
-                <fa-icon [icon]="faCaretDown" class="text-sm"></fa-icon>
+                <fa-icon [icon]="iconsService.faCaretDown" class="text-sm"></fa-icon>
             </a>
         </li>
         <li *ngIf="isPagesDropdownOpen" class="py-2.5 font-normal">

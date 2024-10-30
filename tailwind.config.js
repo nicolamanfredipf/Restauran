@@ -14,6 +14,9 @@ module.exports = {
         "accent-black": "#0F172B",
         "nav-dropdown-black-text": "#1e2125",
         "black-cover-image":"#0f172be6"
+      },
+      boxShadow: {
+        'custom': '0 0 25px rgba(0, 0, 0, 0.1)',
       }
     },
   },

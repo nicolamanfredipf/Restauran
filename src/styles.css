@@ -3,6 +3,14 @@
 @tailwind components;
 @tailwind utilities;
 
+
+.home-image{
+    background: linear-gradient(#0f172be6, #0f172be6), url('/assets/img/bg-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 .action-button{
     color: #FFFFFF;
     border-radius: 2px;
@@ -12,4 +20,8 @@
 
 .action-button:hover{
     background-color: #fda92a;
+}
+
+.default-box-shadow{
+    box-shadow: 0 0 45px rgba(0, 0, 0, .08);
 }

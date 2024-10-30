@@ -1,10 +1,3 @@
-.home-image{
-    background: linear-gradient(#0f172be6, #0f172be6), url('/assets/img/bg-hero.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
 .spin-slow {
     animation: spin 40s linear infinite;
   }
