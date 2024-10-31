@@ -1,13 +1,17 @@
 <section>
-    <nav class="flex border-b">
-        <ul class="flex gap-4 list-none">
-            <li class="flex items-center gap-4">
-                <fa-icon [icon]="iconsService.faMugSaucer" class="text-4xl text-accent-orange"></fa-icon>
-                <div class="flex flex-col items-start justify-start">
-                    <p class="font-normal font-heebo">Popular</p>
-                    <h6 class="font-extrabold font-nunito">Breackfast</h6>
-                </div>
-            </li>
-        </ul>
-    </nav>
-</section>
+    <nav class="flex">
+        <ul class="flex flex-wrap items-center justify-center p-4 list-none">
+            <li *ngFor="let navItem of menuNavbarService.menuNavbarInfo; let i = index" class="flex items-center cursor-pointer w-36"
+            (click)="changeMenuSection(navItem.title,i)"
+            [ngClass]="{'border-b-2 border-accent-orange -mb-0.5' : index === i}"
+            >
+            <fa-icon [icon]="iconsService.getFromName(navItem.iconName)" class="text-4xl text-accent-orange"></fa-icon>
+            <div class="flex flex-col items-start justify-start pl-3">
+                <p class="font-normal font-heebo">{{navItem.lable}}</p>
+                <h6 class="font-extrabold font-nunito">{{navItem.title}}</h6>
+            </div>
+        </li>
+        <hr class="w-full mt-4">
+    </ul>
+</nav>
+</section> 

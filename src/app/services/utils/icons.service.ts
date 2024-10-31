@@ -44,7 +44,7 @@ export class IconsService {
   get faMugSaucer(){
     return this._faMugSaucer;
   }
-
+  
   get faBurger(){
     return this._faBurger;
   }
@@ -59,6 +59,10 @@ export class IconsService {
       return faCartPlus;
       case faHeadset.iconName:
       return faHeadset;
+      case faBurger.iconName:
+      return faBurger;
+      case faMugSaucer.iconName:
+      return faMugSaucer;
       default:
       return faQuestion;
     }

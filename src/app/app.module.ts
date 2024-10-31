@@ -18,6 +18,7 @@ import { SectionsHeadersComponent } from './components/sections-headers/sections
 import { TeamCardsComponent } from './components/sections/team-cards/team-cards.component';
 import { MenuComponent } from './components/pages/menu/menu.component';
 import { MenuPopularComponent } from './components/sections/menu-popular/menu-popular.component';
+import { HttpClientModule } from  '@angular/common/http';
 import { MenuNavbarComponent } from './components/sections/menu-navbar/menu-navbar.component';
 
 @NgModule({
@@ -42,7 +43,8 @@ import { MenuNavbarComponent } from './components/sections/menu-navbar/menu-navb
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

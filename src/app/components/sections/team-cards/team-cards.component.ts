@@ -1,7 +1,7 @@
 import { AnimationsService } from 'src/app/services/utils/animations.service';
 import { AfterViewInit, Component, ElementRef, QueryList, ViewChildren } from '@angular/core';
 import { TeamCard } from 'src/app/classes/team-card';
-import { TeamCardService } from 'src/app/services/team-card.service';
+import { TeamCardService } from 'src/app/services/data/team-card.service';
 
 @Component({
   selector: 'app-team-cards',

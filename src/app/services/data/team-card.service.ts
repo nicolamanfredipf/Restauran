@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { TeamCard } from '../classes/team-card';
+import { TeamCard } from 'src/app/classes/team-card';
 
 @Injectable({
   providedIn: 'root'

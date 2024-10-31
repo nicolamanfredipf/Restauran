@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
-import { AnimationsService } from './animations.service';
 
+import { MenuNavbarService } from './menu-navbar.service';
 
-describe('AnimationsService', () => {
-  let service: AnimationsService;
+describe('MenuNavbarService', () => {
+  let service: MenuNavbarService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(AnimationsService);
+    service = TestBed.inject(MenuNavbarService);
   });
 
   it('should be created', () => {
