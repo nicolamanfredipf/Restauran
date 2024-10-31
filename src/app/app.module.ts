@@ -14,6 +14,7 @@ import { AboutImagesComponent } from './components/sections/about-images/about-i
 import { AboutUsComponent } from './components/sections/about-us/about-us.component';
 import { TeamComponent } from './components/pages/team/team.component';
 import { TeamMembersComponent } from './components/sections/team-members/team-members.component';
+import { SectionsHeadersComponent } from './components/sections-headers/sections-headers.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { TeamMembersComponent } from './components/sections/team-members/team-me
     AboutImagesComponent,
     AboutUsComponent,
     TeamComponent,
-    TeamMembersComponent
+    TeamMembersComponent,
+    SectionsHeadersComponent
   ],
   imports: [
     BrowserModule,
