@@ -8,10 +8,12 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/pages/home/home.component';
 import { AboutComponent } from './components/pages/about/about.component';
 import { ServiceComponent } from './components/pages/service/service.component';
-import { ServiceCardsComponent } from './components/service-cards/service-cards.component';
+import { ServiceCardsComponent } from './components/sections/service-cards/service-cards.component';
 import { PagesHeaderComponent } from './components/pages-header/pages-header.component';
 import { AboutImagesComponent } from './components/about-images/about-images.component';
-import { AboutUsComponent } from './components/about-us/about-us.component';
+import { AboutUsComponent } from './components/sections/about-us/about-us.component';
+import { TeamComponent } from './components/pages/team/team.component';
+import { TeamMembersComponent } from './components/sections/team-members/team-members.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { AboutUsComponent } from './components/about-us/about-us.component';
     ServiceCardsComponent,
     PagesHeaderComponent,
     AboutImagesComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    TeamComponent,
+    TeamMembersComponent
   ],
   imports: [
     BrowserModule,
