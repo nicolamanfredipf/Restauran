@@ -20,6 +20,7 @@ import { MenuComponent } from './components/pages/menu/menu.component';
 import { MenuPopularComponent } from './components/sections/menu-popular/menu-popular.component';
 import { HttpClientModule } from  '@angular/common/http';
 import { MenuNavbarComponent } from './components/sections/menu-navbar/menu-navbar.component';
+import { MenuCardsComponent } from './components/sections/menu-cards/menu-cards.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { MenuNavbarComponent } from './components/sections/menu-navbar/menu-navb
     TeamCardsComponent,
     MenuComponent,
     MenuPopularComponent,
-    MenuNavbarComponent
+    MenuNavbarComponent,
+    MenuCardsComponent
   ],
   imports: [
     BrowserModule,

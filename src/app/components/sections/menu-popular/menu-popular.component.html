@@ -1,3 +1,4 @@
 <section class="flex flex-col">
-    <app-menu-navbar></app-menu-navbar>
+    <app-menu-navbar (changeMenuEvent)="onMenuChange($event)"></app-menu-navbar>
+    <app-menu-cards [dishes]="dishes"></app-menu-cards>
 </section>
