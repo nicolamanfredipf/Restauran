@@ -4,7 +4,7 @@ import { ServiceCard } from '../classes/service-card';
 @Injectable({
   providedIn: 'root'
 })
-export class ServicesService {
+export default class ServiceCardService {
   private _serviceCards: ServiceCard[];
   
   constructor() {

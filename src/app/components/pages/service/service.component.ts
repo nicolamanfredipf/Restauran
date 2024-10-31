@@ -1,4 +1,4 @@
-import { ServicesService } from 'src/app/services/services.service';
+import ServiceCardService from 'src/app/services/serviceCard.service';
 import { IconsService } from '../../../services/icons.service';
 import { Component, Input } from '@angular/core';
 
