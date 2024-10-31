@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { ServiceCard } from '../classes/service-card';
+import { ServiceCard } from '../../classes/service-card';
 
 @Injectable({
   providedIn: 'root'

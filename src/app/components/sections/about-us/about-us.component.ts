@@ -1,5 +1,5 @@
-import { AnimationsService } from 'src/app/service/animations.service';
-import { IconsService } from '../../../services/icons.service';
+import { AnimationsService } from 'src/app/services/utils/animations.service';
+import { IconsService } from '../../../services/utils/icons.service';
 import { AfterViewInit, Component, ElementRef, OnDestroy, OnInit, QueryList, ViewChildren } from '@angular/core';
 
 @Component({

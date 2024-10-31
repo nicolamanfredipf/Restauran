@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
-import { faUserTie, faUtensils, faBars, faCaretDown, faCartPlus, faHeadset, faQuestion } from '@fortawesome/free-solid-svg-icons';
+import { faBurger, faUserTie, faUtensils, faBars, faCaretDown, faCartPlus, faHeadset, faQuestion, faMugSaucer } from '@fortawesome/free-solid-svg-icons';
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +12,8 @@ export class IconsService {
   private _faUserTie=faUserTie;
   private _faCartPlus=faCartPlus;
   private _faHeadset=faHeadset;
-  
+  private _faMugSaucer=faMugSaucer;
+  private _faBurger=faBurger;
   
   constructor() { }
   
@@ -38,6 +39,14 @@ export class IconsService {
   
   get faHeadset(){
     return this._faHeadset;
+  }
+  
+  get faMugSaucer(){
+    return this._faMugSaucer;
+  }
+
+  get faBurger(){
+    return this._faBurger;
   }
   
   getFromName(iconName:string):IconProp{

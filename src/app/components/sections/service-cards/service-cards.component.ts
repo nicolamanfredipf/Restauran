@@ -1,7 +1,7 @@
 import { AfterViewInit, Component, ElementRef, OnInit, QueryList, ViewChildren } from '@angular/core';
-import { AnimationsService } from 'src/app/service/animations.service';
-import { IconsService } from 'src/app/services/icons.service';
-import ServiceCardService from 'src/app/services/serviceCard.service';
+import { AnimationsService } from 'src/app/services/utils/animations.service';
+import { IconsService } from 'src/app/services/utils/icons.service';
+import ServiceCardService from 'src/app/services/data/serviceCard.service';
 
 @Component({
   selector: 'app-service-cards',

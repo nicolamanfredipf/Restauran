@@ -1,4 +1,4 @@
-import { AnimationsService } from 'src/app/service/animations.service';
+import { AnimationsService } from 'src/app/services/utils/animations.service';
 import { AfterViewInit, Component, ElementRef, QueryList, ViewChildren } from '@angular/core';
 import { TeamCard } from 'src/app/classes/team-card';
 import { TeamCardService } from 'src/app/services/team-card.service';

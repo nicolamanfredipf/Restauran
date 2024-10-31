@@ -1,5 +1,5 @@
 import { Component, AfterViewInit, ViewChild, ElementRef, QueryList, ViewChildren } from '@angular/core';
-import { AnimationsService } from 'src/app/service/animations.service';
+import { AnimationsService } from 'src/app/services/utils/animations.service';
 
 @Component({
   selector: 'app-about-images',

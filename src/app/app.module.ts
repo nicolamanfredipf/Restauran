@@ -16,6 +16,9 @@ import { TeamComponent } from './components/pages/team/team.component';
 import { TeamMembersComponent } from './components/sections/team-members/team-members.component';
 import { SectionsHeadersComponent } from './components/sections-headers/sections-headers.component';
 import { TeamCardsComponent } from './components/sections/team-cards/team-cards.component';
+import { MenuComponent } from './components/pages/menu/menu.component';
+import { MenuPopularComponent } from './components/sections/menu-popular/menu-popular.component';
+import { MenuNavbarComponent } from './components/sections/menu-navbar/menu-navbar.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +34,10 @@ import { TeamCardsComponent } from './components/sections/team-cards/team-cards.
     TeamComponent,
     TeamMembersComponent,
     SectionsHeadersComponent,
-    TeamCardsComponent
+    TeamCardsComponent,
+    MenuComponent,
+    MenuPopularComponent,
+    MenuNavbarComponent
   ],
   imports: [
     BrowserModule,
