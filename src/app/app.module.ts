@@ -11,6 +11,7 @@ import { ServiceComponent } from './components/pages/service/service.component';
 import { ServiceCardsComponent } from './components/service-cards/service-cards.component';
 import { PagesHeaderComponent } from './components/pages-header/pages-header.component';
 import { AboutImagesComponent } from './components/about-images/about-images.component';
+import { AboutUsComponent } from './components/about-us/about-us.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { AboutImagesComponent } from './components/about-images/about-images.com
     ServiceComponent,
     ServiceCardsComponent,
     PagesHeaderComponent,
-    AboutImagesComponent
+    AboutImagesComponent,
+    AboutUsComponent
   ],
   imports: [
     BrowserModule,

@@ -28,4 +28,18 @@ export class AnimationsService {
 
     childElementRef.toArray().forEach((element) => observer.observe(element.nativeElement));
   }
+
+  incrementAnimation(startValue: number, endValue: number, updateValue: (value: number) => void) {
+    let count = startValue;
+    const duration = 2000 / endValue
+    const interval = setInterval(() => {
+      if (count < endValue) {
+        count++;
+        updateValue(count);
+      } else {
+        clearInterval(interval);
+      }
+    }, duration); 
+  }
+
 }
