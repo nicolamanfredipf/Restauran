@@ -5,9 +5,9 @@ import { delay } from 'rxjs';
   providedIn: 'root'
 })
 export class AnimationsService {
-
+  
   constructor() { }
-
+  
   animate(childElementRef:QueryList<ElementRef>, animationDelay:number, animationClasses:string[]){
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry, index) => {
@@ -25,21 +25,29 @@ export class AnimationsService {
         }
       });
     });
-
+    
     childElementRef.toArray().forEach((element) => observer.observe(element.nativeElement));
   }
-
-  incrementAnimation(startValue: number, endValue: number, updateValue: (value: number) => void) {
-    let count = startValue;
-    const duration = 2000 / endValue
-    const interval = setInterval(() => {
-      if (count < endValue) {
-        count++;
-        updateValue(count);
-      } else {
-        clearInterval(interval);
-      }
-    }, duration); 
+  
+  incrementAnimation(childElementRef:QueryList<ElementRef>, startValue: number, endValue: number, updateValue: (value: number) => void) {
+    console.log(childElementRef)
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          let count = startValue;
+          const duration = 2000 / endValue
+          const interval = setInterval(() => {
+            if (count < endValue) {
+              count++;
+              updateValue(count);
+            } else {
+              clearInterval(interval);
+            }
+          }, duration); 
+          observer.unobserve(entry.target);
+        }
+      });
+    });
+    childElementRef.toArray().forEach((element) => observer.observe(element.nativeElement));
   }
-
 }

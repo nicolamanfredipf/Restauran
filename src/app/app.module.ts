@@ -10,7 +10,7 @@ import { AboutComponent } from './components/pages/about/about.component';
 import { ServiceComponent } from './components/pages/service/service.component';
 import { ServiceCardsComponent } from './components/sections/service-cards/service-cards.component';
 import { PagesHeaderComponent } from './components/pages-header/pages-header.component';
-import { AboutImagesComponent } from './components/about-images/about-images.component';
+import { AboutImagesComponent } from './components/sections/about-images/about-images.component';
 import { AboutUsComponent } from './components/sections/about-us/about-us.component';
 import { TeamComponent } from './components/pages/team/team.component';
 import { TeamMembersComponent } from './components/sections/team-members/team-members.component';
