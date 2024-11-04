@@ -8,12 +8,12 @@ import { MenuResponse } from 'src/app/classes/responses/menu-response';
   styleUrls: ['./menu-popular.component.css']
 })
 export class MenuPopularComponent {
-  dishes:any;
+  dishes:MenuResponse[];
   
   constructor(public httpService:HttpService){
-    let response;
+    let response = [] as MenuResponse[];
     httpService.getCategoryMenu("Dryck").subscribe({
-      next: (content: MenuResponse) => {
+      next: (content: MenuResponse[]) => {
         response = content;
       },
       error: (error) => {
@@ -24,7 +24,7 @@ export class MenuPopularComponent {
     this.dishes = response;
   }
   
-  onMenuChange(event:MenuResponse){
+  onMenuChange(event:MenuResponse[]){
     this.dishes = event;
   }
   

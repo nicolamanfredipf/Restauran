@@ -3,7 +3,6 @@ import { HttpService } from './../../../services/http/http.service';
 import { IconsService } from 'src/app/services/utils/icons.service';
 import { Component, EventEmitter, Output } from '@angular/core';
 import { MenuNavbarService } from 'src/app/services/data/menu-navbar.service';
-import { HttpClient } from '@angular/common/http';
 import { MenuResponse } from 'src/app/classes/responses/menu-response';
 @Component({
   selector: 'app-menu-navbar',
@@ -12,14 +11,14 @@ import { MenuResponse } from 'src/app/classes/responses/menu-response';
 })
 export class MenuNavbarComponent {
   
-  @Output() changeMenuEvent:EventEmitter<MenuResponse> = new EventEmitter<MenuResponse>();
+  @Output() changeMenuEvent:EventEmitter<MenuResponse[]> = new EventEmitter<MenuResponse[]>();
   
   index: number = -1;
-
+  
   constructor(public iconsService:IconsService, public menuNavbarService:MenuNavbarService, public httpService:HttpService){}
   
   changeMenuSection(title:string, index:number){
-    let response:Observable<MenuResponse> = new Observable<MenuResponse>;
+    let response:Observable<MenuResponse[]> = new Observable<MenuResponse[]>;
     this.index = index;
     
     switch(title){
@@ -35,7 +34,7 @@ export class MenuNavbarComponent {
     }
     
     response.subscribe({
-      next: (content: MenuResponse) => {
+      next: (content: MenuResponse[]) => {
         this.changeMenuEvent.emit(content);
       },
       error: (error) => {

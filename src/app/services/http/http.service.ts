@@ -15,10 +15,10 @@ export class HttpService {
   
   constructor(private httpClient:HttpClient) { }
   
-  getCategoryMenu(category: string): Observable<MenuResponse> {
+  getCategoryMenu(category: string): Observable<MenuResponse[]> {
     const params = new HttpParams().set('category', category);
 
-    return this.httpClient.get<MenuResponse>(this.baseUrl + this.getMenu, { params }).pipe(
+    return this.httpClient.get<MenuResponse[]>(this.baseUrl + this.getMenu, { params }).pipe(
       tap(responseBody => {
         console.log('Risposta ricevuta:', responseBody);
       }),
