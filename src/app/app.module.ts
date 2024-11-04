@@ -21,6 +21,9 @@ import { MenuPopularComponent } from './components/sections/menu-popular/menu-po
 import { HttpClientModule } from  '@angular/common/http';
 import { MenuNavbarComponent } from './components/sections/menu-navbar/menu-navbar.component';
 import { MenuCardsComponent } from './components/sections/menu-cards/menu-cards.component';
+import { ContactComponent } from './components/pages/contact/contact.component';
+import { SubsectionsHeadersComponent } from './components/subsections-headers/subsections-headers.component';
+import { ContactEmailsComponent } from './components/sections/contact-emails/contact-emails.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +43,10 @@ import { MenuCardsComponent } from './components/sections/menu-cards/menu-cards.
     MenuComponent,
     MenuPopularComponent,
     MenuNavbarComponent,
-    MenuCardsComponent
+    MenuCardsComponent,
+    ContactComponent,
+    SubsectionsHeadersComponent,
+    ContactEmailsComponent
   ],
   imports: [
     BrowserModule,
