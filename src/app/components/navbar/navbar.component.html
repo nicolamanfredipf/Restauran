@@ -29,16 +29,16 @@
                 <fa-icon [icon]="iconsService.faCaretDown" class="text-sm"></fa-icon>
             </a>
         </li>
-        <li *ngIf="isPagesDropdownOpen" class="py-2.5 font-normal">
-            <ul class="py-2 list-none bg-white text-nav-dropdown-black-text">
-                <li class="px-4 py-1">
-                    <a [routerLink]="'/booking'" routerLinkActive="bg-accent-orange text-white" (click)="toggleMenu()">Booking</a>
+        <li *ngIf="isPagesDropdownOpen" class="py-2.5 font-normal w-full">
+            <ul class="w-full py-2 list-none bg-white text-nav-dropdown-black-text">
+                <li class="w-full px-4 py-1" routerLinkActive="bg-accent-orange text-white" >
+                    <a [routerLink]="'/booking'" (click)="toggleMenu()">Booking</a>
                 </li>
-                <li class="px-4 py-1">
-                    <a [routerLink]="'/team'" routerLinkActive="bg-accent-orange text-white" (click)="toggleMenu()">Our Team</a>
+                <li class="px-4 py-1" routerLinkActive="bg-accent-orange text-white">
+                    <a [routerLink]="'/team'" (click)="toggleMenu()">Our Team</a>
                 </li>
-                <li class="px-4 py-1">
-                    <a [routerLink]="'testimonial'" routerLinkActive="bg-accent-orange text-white" (click)="toggleMenu()">Testimonial</a>
+                <li class="px-4 py-1" routerLinkActive="bg-accent-orange text-white">
+                    <a [routerLink]="'testimonial'" (click)="toggleMenu()">Testimonial</a>
                 </li>
             </ul>
         </li>
@@ -46,7 +46,7 @@
             <a [routerLink]="'/contact'" routerLinkActive="text-accent-orange" (click)="toggleMenu()">CONTACT</a>
         </li>
         <li class="py-2.5">
-            <a [routerLink]="'booking'" (click)="toggleMenu()">
+            <a [routerLink]="'/booking'" (click)="toggleMenu()">
             <button class="action-button">BOOK A TABLE</button>
         </a>
         </li>
