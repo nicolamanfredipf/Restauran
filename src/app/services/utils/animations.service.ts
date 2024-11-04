@@ -9,6 +9,7 @@ export class AnimationsService {
   constructor() { }
   
   animate(childElementRef:QueryList<ElementRef>, animationDelay:number, animationClasses:string[]){
+    console.log("childElementRef: " ,childElementRef);
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry, index) => {
         if (entry.isIntersecting) {
@@ -18,6 +19,7 @@ export class AnimationsService {
           targetElement.classList.add('animate__animated');
           animationClasses.forEach((animation) => {
             targetElement.classList.add(animation);
+            console.log("add: " ,animation);
           })
           targetElement.style.animationDelay = `${delay}s`;
           

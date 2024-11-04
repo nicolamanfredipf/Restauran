@@ -1,4 +1,3 @@
-import { IconsService } from 'src/app/services/utils/icons.service';
 import { Component } from '@angular/core';
 
 @Component({

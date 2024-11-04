@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -24,6 +25,7 @@ import { MenuCardsComponent } from './components/sections/menu-cards/menu-cards.
 import { ContactComponent } from './components/pages/contact/contact.component';
 import { SubsectionsHeadersComponent } from './components/subsections-headers/subsections-headers.component';
 import { ContactEmailsComponent } from './components/sections/contact-emails/contact-emails.component';
+import { ContactFormComponent } from './components/sections/contact-form/contact-form.component';
 
 @NgModule({
   declarations: [
@@ -46,13 +48,15 @@ import { ContactEmailsComponent } from './components/sections/contact-emails/con
     MenuCardsComponent,
     ContactComponent,
     SubsectionsHeadersComponent,
-    ContactEmailsComponent
+    ContactEmailsComponent,
+    ContactFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
