@@ -26,6 +26,9 @@ import { ContactComponent } from './components/pages/contact/contact.component';
 import { SubsectionsHeadersComponent } from './components/subsections-headers/subsections-headers.component';
 import { ContactEmailsComponent } from './components/sections/contact-emails/contact-emails.component';
 import { ContactFormComponent } from './components/sections/contact-form/contact-form.component';
+import { BookingComponent } from './components/pages/booking/booking.component';
+import { BookingVideoComponent } from './components/sections/booking-video/booking-video.component';
+import { BookingReservationComponent } from './components/sections/booking-reservation/booking-reservation.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +52,10 @@ import { ContactFormComponent } from './components/sections/contact-form/contact
     ContactComponent,
     SubsectionsHeadersComponent,
     ContactEmailsComponent,
-    ContactFormComponent
+    ContactFormComponent,
+    BookingComponent,
+    BookingVideoComponent,
+    BookingReservationComponent
   ],
   imports: [
     BrowserModule,

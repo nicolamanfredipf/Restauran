@@ -1,0 +1,15 @@
+.my-container{
+    position: relative;
+    width: 96px;
+    height:  96px;
+    border-radius: 50%;
+    background-color: orange;
+}
+
+.my-play-button{
+    position: absolute;
+    border-radius: 50%;
+    padding: 20px 24px;
+    background-color: orange;
+
+}

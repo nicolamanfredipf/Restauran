@@ -2,28 +2,28 @@
     <form  [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="flex flex-col w-full gap-4 font-heebo">
         <div class="relative">
             <input id="name" type="text" formControlName="name" 
-                   class="w-full p-3 text-xl border floating-input orange-shadow" placeholder=" " 
+                   class="w-full text-xl border floating-input orange-shadow" placeholder=" " 
                    [ngClass]="{'border-red-400': contactForm.get('name')?.invalid && contactForm.get('name')?.touched}"/>
             <label for="name" class="floating-label ">Your Name</label>
         </div>
         
         <div class="relative">
             <input id="email" type="email" formControlName="email" 
-                   class="floating-input w-full p-2.5 text-xl border orange-shadow" placeholder=" "
+                   class="w-full text-xl border floating-input orange-shadow" placeholder=" "
                    [ngClass]="{'border-red-400': contactForm.get('email')?.invalid && contactForm.get('email')?.touched}"/>
                    <label for="email" class="floating-label">Your Email</label>
         </div>
         
         <div class="relative">
             <input id="subject" type="text" formControlName="subject" 
-                   class="floating-input w-full p-2.5 text-xl border orange-shadow" placeholder=" "
+                   class="w-full text-xl border floating-input orange-shadow" placeholder=" "
                    [ngClass]="{'border-red-400': contactForm.get('subject')?.invalid && contactForm.get('subject')?.touched}"/>
             <label for="subject" class="floating-label">Subject</label>
         </div>
         
         <div class="relative">
             <textarea id="message" formControlName="message" 
-                      class="floating-input w-full p-2.5 text-xl border orange-shadow" placeholder=" " rows="5"
+                      class="w-full text-xl border floating-input orange-shadow" placeholder=" " rows="5"
                    [ngClass]="{'border-red-400': contactForm.get('message')?.invalid && contactForm.get('message')?.touched}"></textarea>
             <label for="message" class="floating-label textarea-label">Message</label>
         </div>
