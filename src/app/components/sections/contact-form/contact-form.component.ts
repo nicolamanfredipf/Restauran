@@ -22,8 +22,6 @@ export class ContactFormComponent implements AfterViewInit{
   }
   
   ngAfterViewInit(): void {
-    console.log("source: " ,this.formSection.map((v) => v.nativeElement));
-
     this.animationsService.animate(this.formSection, 0, ['animate__slideInUp']);
   }
   
