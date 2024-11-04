@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ViewChildren } from '@angular/core';
 
 @Component({
   selector: 'app-subsections-headers',
@@ -6,7 +6,5 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./subsections-headers.component.css']
 })
 export class SubsectionsHeadersComponent {
-
   @Input('title') title:string = '';
-
 }
