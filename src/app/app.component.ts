@@ -8,5 +8,10 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'Restauran';
-
+  
+  topButtonvisibility:boolean = false;
+  
+  manageTopButton(visibility:boolean){
+      this.topButtonvisibility = visibility;
+  }
 }

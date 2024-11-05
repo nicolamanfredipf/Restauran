@@ -31,6 +31,7 @@ import { BookingVideoComponent } from './components/sections/booking-video/booki
 import { BookingReservationComponent } from './components/sections/booking-reservation/booking-reservation.component';
 import { TestimonialComponent } from './components/pages/testimonial/testimonial.component';
 import { TestimonailsCardsComponent } from './components/sections/testimonails-cards/testimonails-cards.component';
+import { TopButtonComponent } from './components/top-button/top-button.component';
 
 @NgModule({
   declarations: [
@@ -59,7 +60,8 @@ import { TestimonailsCardsComponent } from './components/sections/testimonails-c
     BookingVideoComponent,
     BookingReservationComponent,
     TestimonialComponent,
-    TestimonailsCardsComponent
+    TestimonailsCardsComponent,
+    TopButtonComponent
   ],
   imports: [
     BrowserModule,
