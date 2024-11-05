@@ -13,7 +13,6 @@ export class MenuCardsComponent implements OnInit{
   constructor(){}
   
   ngOnInit(): void {
-    console.log(this.dishes);
   }
   
 }

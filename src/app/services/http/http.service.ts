@@ -18,13 +18,13 @@ export class HttpService {
   constructor(private httpClient:HttpClient) { }
   
   getCategoryMenu(category: string): Observable<MenuResponse[]> {
-    console.log('Effettuo la richiesta:', this.baseUrl + this.getMenu);
+    // console.log('Effettuo la richiesta:', this.baseUrl + this.getMenu);
 
     const params = new HttpParams().set('category', category);
     
     return this.httpClient.get<MenuResponse[]>(this.baseUrl + this.getMenu, { params }).pipe(
       tap(responseBody => {
-        console.log('Risposta ricevuta:', responseBody);
+        // console.log('Risposta ricevuta:', responseBody);
       }),
       catchError(error => {
         console.error('Errore nella richiesta:', error);
@@ -34,14 +34,14 @@ export class HttpService {
   }
   
   getTestimonails(): Observable<Review[]> {
-    console.log('Effettuo la richiesta:', this.baseUrl + this.getReviews);
+    // console.log('Effettuo la richiesta:', this.baseUrl + this.getReviews);
   
     return this.httpClient.get<{ data: any[] }>(this.baseUrl + this.getReviews).pipe(
       map(response => response.data.map(item => 
         new Review(item.id, item.customer_name, item.customer_job, item.text)
       )),
       tap(responseBody => {
-        console.log('Risposta ricevuta:', responseBody);
+        // console.log('Risposta ricevuta:', responseBody);
       }),
       catchError(error => {
         console.error('Errore nella richiesta:', error.message);

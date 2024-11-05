@@ -32,6 +32,7 @@ import { BookingReservationComponent } from './components/sections/booking-reser
 import { TestimonialComponent } from './components/pages/testimonial/testimonial.component';
 import { TestimonailsCardsComponent } from './components/sections/testimonails-cards/testimonails-cards.component';
 import { TopButtonComponent } from './components/top-button/top-button.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -61,7 +62,8 @@ import { TopButtonComponent } from './components/top-button/top-button.component
     BookingReservationComponent,
     TestimonialComponent,
     TestimonailsCardsComponent,
-    TopButtonComponent
+    TopButtonComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

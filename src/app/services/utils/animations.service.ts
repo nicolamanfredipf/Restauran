@@ -32,7 +32,7 @@ export class AnimationsService {
   }
   
   incrementAnimation(childElementRef:QueryList<ElementRef>, startValue: number, endValue: number, updateValue: (value: number) => void) {
-    console.log(childElementRef)
+    // console.log(childElementRef)
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {

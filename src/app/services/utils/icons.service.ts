@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
-import { faArrowUp, faXmark, faQuoteLeft, faPlay, faEnvelopeOpen, faBurger, faUserTie, faUtensils, faBars, faCaretDown, faCartPlus, faHeadset, faQuestion, faMugSaucer } from '@fortawesome/free-solid-svg-icons';
+import { faInstagram, faLinkedin, faXTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons';
+import { faCopyright } from '@fortawesome/free-regular-svg-icons';
+import { faAngleRight, faArrowUp, faXmark, faQuoteLeft, faPlay, faEnvelopeOpen, faBurger, faUserTie, faUtensils, faBars, faCaretDown, faCartPlus, faHeadset, faQuestion, faMugSaucer,  faEnvelope, faPhone, faLocationDot } from '@fortawesome/free-solid-svg-icons';
 
 @Injectable({
   providedIn: 'root'
@@ -19,6 +21,16 @@ export class IconsService {
   private _faQuoteLeft=faQuoteLeft;
   private _faXmark=faXmark;
   private _faArrowUp=faArrowUp;
+  private _faAngleRight=faAngleRight;
+  private _faInstagram=faInstagram;
+  private _faXTwitter=faXTwitter;
+  private _faYoutube=faYoutube;
+  private _faLinkedin=faLinkedin;
+  private _faEnvelope=faEnvelope;
+  private _faPhone=faPhone;
+  private _faLocationDot=faLocationDot;
+  private _faCopyright=faCopyright;
+
   
   constructor() { }
   
@@ -74,6 +86,42 @@ export class IconsService {
     return this._faArrowUp;
   }
   
+  get faLinkedin(){
+    return this._faLinkedin;
+  }
+  
+  get faInstagram(){
+    return this._faInstagram;
+  }
+  
+  get faYoutube(){
+    return this._faYoutube;
+  }
+  
+  get faXTwitter(){
+    return this._faXTwitter;
+  }
+  
+  get faAngleRight(){
+    return this._faAngleRight;
+  }
+
+  get faLocationDot(){
+    return this._faLocationDot;
+  }
+  
+  get faPhone(){
+    return this._faPhone;
+  }
+  
+  get faEnvelope(){
+    return this._faEnvelope;
+  }
+  
+  get faCopyright(){
+    return this._faCopyright;
+  }
+
   getFromName(iconName:string):IconProp{
     switch(iconName){
       case faUserTie.iconName:

@@ -1,0 +1,9 @@
+.circle{
+    border: solid 2px #c5c5c5;
+    border-radius: 50%;
+}
+
+#email {
+    all:unset;
+    color: rgb(100, 100, 100);
+}
