@@ -7,7 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./booking-video.component.css']
 })
 export class BookingVideoComponent {
+  isModalClose:boolean = true;
 
   constructor(public iconsService:IconsService){}
 
+
+  toggleModal(){
+    this.isModalClose = !this.isModalClose;
+  }
 }
