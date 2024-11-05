@@ -11,5 +11,32 @@
     border-radius: 50%;
     padding: 20px 24px;
     background-color: orange;
+}
 
+.my-radar-animation{
+
+    animation: my-radar-animation 1.5s infinite; 
+}
+
+@keyframes my-radar-animation{
+    0% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+    25% {
+        transform: scale(1.025);
+        opacity: 0.6; 
+    }
+    50% {
+        transform: scale(1.05); /* Ingrossa */
+        opacity: 0.4; 
+    }
+    75% {
+        transform: scale(1.025); /* Ingrossa */
+        opacity: 0.2; 
+    }
+    100% {
+        transform: scale(1.05); /* Torna alla dimensione originale */
+        opacity: 0; 
+    }
 }
