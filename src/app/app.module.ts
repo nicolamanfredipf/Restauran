@@ -29,6 +29,8 @@ import { ContactFormComponent } from './components/sections/contact-form/contact
 import { BookingComponent } from './components/pages/booking/booking.component';
 import { BookingVideoComponent } from './components/sections/booking-video/booking-video.component';
 import { BookingReservationComponent } from './components/sections/booking-reservation/booking-reservation.component';
+import { TestimonialComponent } from './components/pages/testimonial/testimonial.component';
+import { TestimonailsCardsComponent } from './components/sections/testimonails-cards/testimonails-cards.component';
 
 @NgModule({
   declarations: [
@@ -55,7 +57,9 @@ import { BookingReservationComponent } from './components/sections/booking-reser
     ContactFormComponent,
     BookingComponent,
     BookingVideoComponent,
-    BookingReservationComponent
+    BookingReservationComponent,
+    TestimonialComponent,
+    TestimonailsCardsComponent
   ],
   imports: [
     BrowserModule,

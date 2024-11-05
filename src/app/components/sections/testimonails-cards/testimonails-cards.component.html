@@ -1,0 +1,23 @@
+<!-- Carusel -->
+<section #testimonials class="flex flex-col gap-3 p-6">
+    <!-- Cards -->
+        <div #card class="grid grid-rows-4 p-4 text-white card-size bg-accent-orange font-heebo">
+            <fa-icon [icon]="iconsService.faQuoteLeft" class="row-span-1 text-5xl"></fa-icon>
+            <p class="row-span-2 mb-2 overflow-hidden">{{review.text()}}</p>
+            <div class="flex items-center justify-start row-span-1 gap-4">
+                <div class="img-container">
+                    <img src="/assets/img/testimonial-3.jpg" alt="image">
+                </div>
+                <div class="flex flex-col">
+                    <h5 class="text-xl font-extrabold font-nunito">{{review.customerName()}}</h5>
+                    <p>{{review.customerJob()}}</p>
+                </div>
+            </div>
+        </div>
+    <!-- Buttons -->
+    <div class="flex items-center justify-center gap-2">
+        <button *ngFor="let rev of reviews" class="corousel-button"
+        (click)="selectCard(rev)"
+        [ngClass]="{'bg-accent-orange' : rev.id() == review.id()}"></button>
+    </div>
+</section>

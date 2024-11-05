@@ -1,0 +1,41 @@
+/* .carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 600px;
+    margin: auto;
+  }
+  
+  .carousel-image {
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .carousel-image img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  button {
+    background-color: transparent;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+  } */
+  
+.img-container{
+    width: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.corousel-button{
+    border-radius: 50%;
+    border: solid 1px #c7c7c7;
+    width: 15px;
+    height: 15px;
+}
+
+.card-size{
+    width: 327px;
+    height: 238px;
+}
