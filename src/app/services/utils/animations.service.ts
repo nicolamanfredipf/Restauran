@@ -54,31 +54,19 @@ export class AnimationsService {
   }
   
   animateCarousel(childElementRef: QueryList<ElementRef>, animationClasses: string[]) {
-    // TODO: sistemare anizione delle card e dei bottoni
     if (childElementRef) {
-      const scrollY = window.scrollY;
-  
       childElementRef.forEach((element) => {
         const targetElement = element.nativeElement;
-        targetElement.classList.add('animate__animated');
-  
-        animationClasses.forEach((animation) => {
-          targetElement.classList.add(animation);
-        });
-  
+        
+        targetElement.classList.add('animate__animated', ...animationClasses);
+        
+        console.log("added: ", targetElement.classList);
+        
         targetElement.addEventListener('animationend', () => {
-          targetElement.classList.remove('animate__animated'); 
-          animationClasses.forEach((animation) => {
-            targetElement.classList.remove(animation); 
-          });
-  
-          window.scrollTo(0, scrollY); 
-        }, { once: true }); 
+          targetElement.classList.remove('animate__animated', ...animationClasses);
+        }, { once: true });
       });
     }
   }
-  
-  
-  
-  
 }
+

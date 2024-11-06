@@ -1,41 +1,38 @@
-/* .carousel {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 600px;
-    margin: auto;
-  }
-  
-  .carousel-image {
-    width: 100%;
-    overflow: hidden;
-  }
-  
-  .carousel-image img {
-    width: 100%;
-    border-radius: 10px;
-  }
-  
-  button {
-    background-color: transparent;
-    border: none;
-    font-size: 2rem;
-    cursor: pointer;
-  } */
-  
 .img-container{
-    width: 50px;
-    border-radius: 50%;
-    overflow: hidden;
+  width: 50px;
+  border-radius: 50%;
+  overflow: hidden;
 }
 .corousel-button{
-    border-radius: 50%;
-    border: solid 1px #c7c7c7;
-    width: 15px;
-    height: 15px;
+  border-radius: 50%;
+  border: solid 1px #c7c7c7;
+  width: 15px;
+  height: 15px;
 }
 
 .card-size{
-    width: 327px;
-    height: 238px;
+  width: 327px;
+  height: 238px;
+}
+
+.my-fade-in-animation{
+  animation: fade-out 0.5s reverse forwards;
+}
+
+@keyframes fade-out{
+  0%{
+    background-color: rgb(254, 161, 22);
+  }
+  25%{
+    background-color: rgba(254, 161, 22, 0.75);
+  }
+  50%{
+    background-color: rgba(254, 161, 22, 0.5);
+  }
+  75%{
+    background-color: rgba(254, 161, 22, 0.25);
+  }
+  100%{
+    background-color: rgba(254, 161, 22, 0);
+  }
 }

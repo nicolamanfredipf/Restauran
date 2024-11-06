@@ -1,5 +1,5 @@
 <!-- Carusel -->
-<section #testimonials class="flex flex-col gap-3 p-6">
+<section #testimonials class="flex flex-col gap-3 p-6 mb-12">
     <!-- Cards -->
         <div #card class="grid grid-rows-4 p-4 text-white card-size bg-accent-orange font-heebo">
             <fa-icon [icon]="iconsService.faQuoteLeft" class="row-span-1 text-5xl"></fa-icon>
@@ -16,8 +16,9 @@
         </div>
     <!-- Buttons -->
     <div class="flex items-center justify-center gap-2">
-        <button *ngFor="let rev of reviews" class="corousel-button"
-        (click)="selectCard(rev)"
-        [ngClass]="{'bg-accent-orange' : rev.id() == review.id()}"></button>
+        <button *ngFor="let rev of reviews; let i = index" class="corousel-button"
+        (click)="selectCard(rev, i)"
+        [ngClass]="{'my-fade-in-animation' : rev.id() == review.id()}"
+        ></button>
     </div>
 </section>

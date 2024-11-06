@@ -15,6 +15,7 @@ export class TestimonailsCardsComponent implements OnInit, AfterViewInit{
   
   reviews!:Review[];
   review!:Review;
+  oldIndex:number=0;
   
   constructor(public httpService:HttpService, public iconsService:IconsService, public animationsService:AnimationsService){}
   
@@ -38,18 +39,21 @@ export class TestimonailsCardsComponent implements OnInit, AfterViewInit{
     this.animationsService.animate(this.testimonials,0,['animate__slideInUp'])
   }
   
-  selectCard(newRev:Review){
+  selectCard(newRev:Review, index:number){
     this.reviews.forEach(rev => {
       if(rev.id() === newRev.id()){
-        if(rev.id() < newRev.id()){
+        if(this.oldIndex < index){
           // console.log('card:',this.card)
+          console.log('if')
           this.animationsService.animateCarousel(this.card,['animate__slideInLeft']);
         }else{
+          console.log('else')
           this.animationsService.animateCarousel(this.card,['animate__slideInRight']);
           // console.log('card:',this.card)
         }
         this.review = rev;
       }
     });
+    this.oldIndex = index;
   }  
 }
