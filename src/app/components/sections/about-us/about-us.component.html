@@ -1,4 +1,4 @@
-<section class="p-4">
+<section class="p-4 md:p-12">
     <app-subsections-headers [title]="'About us'"></app-subsections-headers>
     <div>
         <h1 class="mb-4 text-3xl font-extrabold font-nunito">Welcome to             
@@ -7,8 +7,8 @@
         </h1>
         <p class="mb-4 font-heebo">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos erat ipsum et lorem et sit, sed stet lorem sit.</p>
         <p class="mb-4 font-heebo">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
-        <div class="flex flex-col gap-4">
-            <div class="flex flex-row items-center gap-4">
+        <div class="flex flex-col gap-4 md:flex-row md:flex-wrap md:gap-0">
+            <div class="flex flex-row items-center gap-4 md:w-1/2">
                 <div class="w-0 h-10 border-l-4 border-accent-orange"></div>
                 <h1 #counters class="text-3xl font-extrabold text-accent-orange font-nunito">{{yearStart0}}</h1>
                 <div class="flex flex-col pl-4">
@@ -16,7 +16,7 @@
                     <h6 class="font-extrabold font-nunito">Experience</h6>
                 </div>
             </div>
-            <div class="flex flex-row items-center gap-4">
+            <div class="flex flex-row items-center gap-4 md:w-1/2">
                 <div class="w-0 h-10 border-l-4 border-accent-orange"></div>
                 <h1 #counters class="text-3xl font-extrabold text-accent-orange font-nunito">{{chefStart0}}</h1>
                 <div class="flex flex-col pl-4">
@@ -24,7 +24,7 @@
                     <h6 class="font-extrabold font-nunito">Experience</h6>
                 </div>
             </div>
-            <div class="w-1/2 h-16">
+            <div class="w-1/2 h-16 md:mt-4 md:w-1/4">
                 <button class="w-full h-full py-4 action-button">READ MORE</button>
             </div>
         </div>
