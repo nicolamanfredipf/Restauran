@@ -1,145 +1,142 @@
-<div class="p-6 text-white bg-accent-black">
-    <div>
-        <!-- Company -->
-        <div class="flex flex-col mt-16">
-            <app-subsections-headers [title]="'Company'"></app-subsections-headers>
-            <ul class="flex flex-col gap-1 mt-4 list-none">
-                <li>
-                    <a href="/about" class="font-medium font-nunito">
-                        <fa-icon [icon]="iconsService.faAngleRight" class="mr-1 text-sm"></fa-icon>
-                        About Us
-                    </a>
-                </li>
-                <li>
-                    <a href="/contact" class="font-medium font-nunito">
-                        <fa-icon [icon]="iconsService.faAngleRight" class="mr-1 text-sm"></fa-icon>
-                        Contact Us
-                    </a>
-                </li>
-                <li>
-                    <a href="/booking" class="font-medium font-nunito">
-                        <fa-icon [icon]="iconsService.faAngleRight" class="mr-1 text-sm"></fa-icon>
-                        Reservation
-                    </a>
-                </li>
-                <li>
-                    <a routerLink="/#" class="font-medium font-nunito">
-                        <fa-icon [icon]="iconsService.faAngleRight" class="mr-1 text-sm"></fa-icon>
-                        Privacy Policy
-                    </a>
-                </li>
-                <li>
-                    <a routerLink="/#" class="font-medium font-nunito">
-                        <fa-icon [icon]="iconsService.faAngleRight" class="mr-1 text-sm"></fa-icon>
-                        Terms & Condition
-                    </a>
-                </li>
-            </ul>
-        </div>
-        
-        <!-- Contact -->
-        <div class="flex flex-col mt-16">
-            <app-subsections-headers [title]="'Contact'"></app-subsections-headers>
-            <ul class="flex flex-col gap-1 mt-4 list-none">
-                <li>
-                    <fa-icon [icon]="iconsService.faLocationDot" class="mr-3 text-sm"></fa-icon>
-                    123, Street, New York, USA
-                </li>
-                <li>
-                    <a href="tel:" class="font-medium font-nunito">
-                        <fa-icon [icon]="iconsService.faPhone" class="mr-3 text-sm"></fa-icon>
-                        +00 111 111 11 11
-                    </a>
-                </li>
-                <li>
-                    <a href="mailto:" class="font-medium font-nunito">
-                        <fa-icon [icon]="iconsService.faEnvelope" class="mr-3 text-sm"></fa-icon>
-                        info&#64;Example.com
-                    </a>
-                </li>
-            </ul>
-            <ul class="flex gap-6 mt-4 list-none">
-                <li>
-                    <a href="https://x.com/?lang=it" class="px-2 py-1 font-medium circle">
-                        <fa-icon [icon]="iconsService.faXTwitter" class="text-sm"></fa-icon>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.instagram.com" class="px-2.5 py-1 font-medium font-nunito circle">
-                        <fa-icon [icon]="iconsService.faInstagram" class="text-sm"></fa-icon>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.youtube.com" class="px-2 py-1 font-medium font-nunito circle">
-                        <fa-icon [icon]="iconsService.faYoutube" class="text-sm"></fa-icon>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.linkedin.com" class="px-2.5 py-1 font-medium font-nunito circle">
-                        <fa-icon [icon]="iconsService.faLinkedin" class="text-sm"></fa-icon>
-                    </a>
-                </li>
-            </ul>
-        </div>
-        
-        <!-- Opening -->
-        <div class="flex flex-col mt-16">
-            <app-subsections-headers [title]="'Opening'"></app-subsections-headers>
-            <div class="flex flex-col gap-3 mt-4">
-                <div class="flex flex-col gap-1 font-nunito">
-                    <h3 class="text-xl">Monday - Saturday</h3>
-                    <h5 class="text-lg">09AM - 09PM</h5>
-                </div>
-                <div class="flex flex-col gap-1 font-nunito">
-                    <h3 class="text-xl">Monday - Saturday</h3>
-                    <h5 class="text-lg">09AM - 09PM</h5>
-                </div>
+<div class="p-6 text-white md:grid bg-accent-black md:grid-cols-2 md:p-12">
+    <!-- Company -->
+    <div class="flex flex-col mt-16">
+        <app-subsections-headers [title]="'Company'"></app-subsections-headers>
+        <ul class="flex flex-col gap-1 mt-4 list-none">
+            <li>
+                <a href="/about" class="font-medium font-nunito">
+                    <fa-icon [icon]="iconsService.faAngleRight" class="mr-1 text-sm"></fa-icon>
+                    About Us
+                </a>
+            </li>
+            <li>
+                <a href="/contact" class="font-medium font-nunito">
+                    <fa-icon [icon]="iconsService.faAngleRight" class="mr-1 text-sm"></fa-icon>
+                    Contact Us
+                </a>
+            </li>
+            <li>
+                <a href="/booking" class="font-medium font-nunito">
+                    <fa-icon [icon]="iconsService.faAngleRight" class="mr-1 text-sm"></fa-icon>
+                    Reservation
+                </a>
+            </li>
+            <li>
+                <a routerLink="/#" class="font-medium font-nunito">
+                    <fa-icon [icon]="iconsService.faAngleRight" class="mr-1 text-sm"></fa-icon>
+                    Privacy Policy
+                </a>
+            </li>
+            <li>
+                <a routerLink="/#" class="font-medium font-nunito">
+                    <fa-icon [icon]="iconsService.faAngleRight" class="mr-1 text-sm"></fa-icon>
+                    Terms & Condition
+                </a>
+            </li>
+        </ul>
+    </div>
+    
+    <!-- Contact -->
+    <div class="flex flex-col mt-16">
+        <app-subsections-headers [title]="'Contact'"></app-subsections-headers>
+        <ul class="flex flex-col gap-1 mt-4 list-none">
+            <li>
+                <fa-icon [icon]="iconsService.faLocationDot" class="mr-3 text-sm"></fa-icon>
+                123, Street, New York, USA
+            </li>
+            <li>
+                <a href="tel:" class="font-medium font-nunito">
+                    <fa-icon [icon]="iconsService.faPhone" class="mr-3 text-sm"></fa-icon>
+                    +00 111 111 11 11
+                </a>
+            </li>
+            <li>
+                <a href="mailto:" class="font-medium font-nunito">
+                    <fa-icon [icon]="iconsService.faEnvelope" class="mr-3 text-sm"></fa-icon>
+                    info&#64;Example.com
+                </a>
+            </li>
+        </ul>
+        <ul class="flex gap-6 mt-4 list-none">
+            <li>
+                <a href="https://x.com/?lang=it" class="px-2 py-1 font-medium circle">
+                    <fa-icon [icon]="iconsService.faXTwitter" class="text-sm"></fa-icon>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com" class="px-2.5 py-1 font-medium font-nunito circle">
+                    <fa-icon [icon]="iconsService.faInstagram" class="text-sm"></fa-icon>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.youtube.com" class="px-2 py-1 font-medium font-nunito circle">
+                    <fa-icon [icon]="iconsService.faYoutube" class="text-sm"></fa-icon>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com" class="px-2.5 py-1 font-medium font-nunito circle">
+                    <fa-icon [icon]="iconsService.faLinkedin" class="text-sm"></fa-icon>
+                </a>
+            </li>
+        </ul>
+    </div>
+    
+    <!-- Opening -->
+    <div class="flex flex-col mt-16">
+        <app-subsections-headers [title]="'Opening'"></app-subsections-headers>
+        <div class="flex flex-col gap-3 mt-4">
+            <div class="flex flex-col gap-1 font-nunito">
+                <h3 class="text-xl">Monday - Saturday</h3>
+                <h5 class="text-lg">09AM - 09PM</h5>
             </div>
-        </div>
-        
-        <!-- Newsletter -->
-        <div class="flex flex-col mt-16">
-            <app-subsections-headers [title]="'Newsletter'"></app-subsections-headers>
-            <div class="flex flex-col gap-3 mt-4">
-                <p class="font-heebo">Some description About newsletter</p>
-                <form [formGroup]="newsletterForm" (ngSubmit)="submitEmail()">
-                    <div class="flex items-center justify-around p-2 border bg-accent-white border-accent-orange">
-                        <input type="email" formControlName="email" id="email" placeholder="Your email" class="m-2 bg-accent-white font-heebo">
-                        <button class="font-medium action-button">SINGUP</button>
-                    </div>
-                </form>
+            <div class="flex flex-col gap-1 font-nunito">
+                <h3 class="text-xl">Monday - Saturday</h3>
+                <h5 class="text-lg">09AM - 09PM</h5>
             </div>
-        </div>
-
-        <hr class="mt-12 opacity-15">
-
-        <!-- Copiright -->
-        <div class="mt-8">
-            <p class="leading-6 text-center font-nunito">
-                <fa-icon [icon]="iconsService.faCopyright" class="mr-1"></fa-icon>
-                <a href="/home" class="inline-block underline underline-offset-4">Your Site Name</a>
-                , All Right Reserved. Designed By
-                <a href="https://htmlcodex.com" class="underline underline-offset-4">HTML Codex</a>
-            </p>
-            <p class="mt-6 text-center font-nunito">
-                Distribuited By 
-                <a href="https://themewagon.com" class="underline underline-offset-4">ThemeWagon</a>
-            </p>
-            <ul class="flex items-center justify-center mx-2 mt-4 list-none">
-                <li class="px-2">
-                    <a href="/home" class="pr-4 border-r">Home</a>
-                </li>
-                <li class="px-2">
-                    <a routerLink="/#" class="pr-4 border-r">Cookies</a>
-                </li>
-                <li class="px-2">
-                    <a routerLink="/#" class="pr-4 border-r">Help</a>
-                </li>
-                <li class="px-2">
-                    <a routerLink="/#" class="pr-4">FAQs</a>
-                </li>
-            </ul>
         </div>
     </div>
     
+    <!-- Newsletter -->
+    <div class="flex flex-col mt-16">
+        <app-subsections-headers [title]="'Newsletter'"></app-subsections-headers>
+        <div class="flex flex-col gap-3 mt-4">
+            <p class="font-heebo">Some description About newsletter</p>
+            <form [formGroup]="newsletterForm" (ngSubmit)="submitEmail()">
+                <div class="flex items-center justify-around p-2 border bg-accent-white border-accent-orange">
+                    <input type="email" formControlName="email" id="email" placeholder="Your email" class="m-2 bg-accent-white font-heebo">
+                    <button class="font-medium action-button">SINGUP</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <hr class="mt-12 md:col-span-2 opacity-15">
+    
+    <!-- Copiright -->
+    <div class="mt-8 md:col-span-2">
+        <p class="leading-6 text-center font-nunito">
+            <fa-icon [icon]="iconsService.faCopyright" class="mr-1"></fa-icon>
+            <a href="/home" class="inline-block underline underline-offset-4">Your Site Name</a>
+            , All Right Reserved. Designed By
+            <a href="https://htmlcodex.com" class="underline underline-offset-4">HTML Codex</a>
+        </p>
+        <p class="mt-6 text-center font-nunito">
+            Distribuited By 
+            <a href="https://themewagon.com" class="underline underline-offset-4">ThemeWagon</a>
+        </p>
+        <ul class="flex items-center justify-center mx-2 mt-4 list-none">
+            <li class="px-2">
+                <a href="/home" class="pr-4 border-r">Home</a>
+            </li>
+            <li class="px-2">
+                <a routerLink="/#" class="pr-4 border-r">Cookies</a>
+            </li>
+            <li class="px-2">
+                <a routerLink="/#" class="pr-4 border-r">Help</a>
+            </li>
+            <li class="px-2">
+                <a routerLink="/#" class="pr-4">FAQs</a>
+            </li>
+        </ul>
+    </div>
 </div>
