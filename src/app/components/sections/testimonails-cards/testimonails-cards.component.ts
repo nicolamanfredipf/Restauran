@@ -14,7 +14,7 @@ export class TestimonailsCardsComponent implements OnInit, AfterViewInit{
   @ViewChildren('card') card!:QueryList<ElementRef>;
   
   reviews!:Review[];
-  review!:Review;
+  review:Review = new Review(-1,'','','');
   oldIndex:number=0;
   
   constructor(public httpService:HttpService, public iconsService:IconsService, public animationsService:AnimationsService){}
