@@ -1,44 +1,44 @@
 <section class="flex flex-col items-start justify-start p-12 bg-accent-black">
     <app-subsections-headers [title]="'Reservation'"></app-subsections-headers>
     <h1 class="text-2xl font-extrabold text-white font-nunito">Book A Table Online</h1>
-    <form  [formGroup]="reservationForm" (ngSubmit)="onSubmit()" class="flex flex-col w-full gap-4 font-heebo">
-        <div class="relative">
+    <form  [formGroup]="reservationForm" (ngSubmit)="onSubmit()" class="flex flex-col w-full gap-4 font-heebo md:flex-row md:flex-wrap md:gap-0">
+        <div class="relative md:w-1/2 md:pr-2 md:my-4">
             <input id="name" type="text" formControlName="name" 
             class="w-full text-xl border floating-input orange-shadow" placeholder=" " 
             [ngClass]="{'border-red-400': reservationForm.get('name')?.invalid && reservationForm.get('name')?.touched}"/>
             <label for="name" class="floating-label ">Your Name</label>
         </div>
         
-        <div class="relative">
+        <div class="relative md:w-1/2 md:pr-2 md:my-4">
             <input id="email" type="email" formControlName="email" 
             class="w-full text-xl border floating-input orange-shadow" placeholder=" "
             [ngClass]="{'border-red-400': reservationForm.get('email')?.invalid && reservationForm.get('email')?.touched}"/>
             <label for="email" class="floating-label">Your Email</label>
         </div>
         
-        <div class="relative">
+        <div class="relative md:w-1/2 md:pr-2 md:my-4">
             <input id="dt" type="datetime-local" formControlName="dt" 
             class="w-full text-xl border floating-input orange-shadow" placeholder=" "
             [ngClass]="{'border-red-400': reservationForm.get('dt')?.invalid && reservationForm.get('dt')?.touched}"/>
             <label for="dt" class="floating-label">Date & Time</label>
         </div>
         
-        <div class="relative">
+        <div class="relative md:w-1/2 md:pr-2 md:my-4">
             <select id="guests" formControlName="guests" 
-            class="w-full text-xl border floating-input orange-shadow">
+            class="w-full h-full text-xl border floating-input orange-shadow">
             <option value="1" selected>People 1</option>
             <option *ngFor="let g of [2,3,4,5,6,7,8,9]" value="{{g}}"> People {{g}}</option>
         </select>
         <label for="guests" class="floating-label">No Of People</label>
     </div>
     
-    <div class="relative">
+    <div class="relative md:w-full md:pr-2 md:my-4">
         <textarea id="message" formControlName="message" 
         class="floating-input w-full p-2.5 text-xl border orange-shadow" placeholder=" " rows="5"
         [ngClass]="{'border-red-400': reservationForm.get('message')?.invalid && reservationForm.get('message')?.touched}"></textarea>
         <label for="message" class="floating-label textarea-label">Special Request</label>
     </div>
     
-    <button type="submit" class="action-button">BOOK NOW</button>
+    <button type="submit" class="action-button md:w-full">BOOK NOW</button>
 </form>
 </section>

@@ -1,9 +1,11 @@
-.my-container{
-    position: relative;
+.my-button-container{
     width: 96px;
     height:  96px;
     border-radius: 50%;
     background-color: orange;
+}
+.video-bg-image{
+    background-image: url(/assets/img/video.jpg);
 }
 
 .my-play-button{
