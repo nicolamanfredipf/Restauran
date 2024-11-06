@@ -1,7 +1,7 @@
 <section>
-    <nav class="flex">
-        <ul class="flex flex-wrap items-center justify-center p-4 list-none">
-            <li *ngFor="let navItem of menuNavbarService.menuNavbarInfo; let i = index" class="flex items-center cursor-pointer w-36"
+    <nav class="flex items-center justify-center">
+        <ul class="flex flex-wrap items-center justify-center w-full list-none md:gap-8 md:flex-nowrap">
+            <li *ngFor="let navItem of menuNavbarService.menuNavbarInfo; let i = index" class="flex items-start justify-center w-1/2 cursor-pointer "
             (click)="changeMenuSection(navItem.title,i)"
             [ngClass]="{'border-b-2 border-accent-orange -mb-0.5' : index === i}"
             >
@@ -11,7 +11,8 @@
                 <h6 class="font-extrabold font-nunito">{{navItem.title}}</h6>
             </div>
         </li>
-        <hr class="w-full mt-4">
     </ul>
 </nav>
+<hr class="w-full my-4">
+
 </section> 
