@@ -1,4 +1,4 @@
-<div class="p-6 text-white md:grid bg-accent-black md:grid-cols-2 md:p-12">
+<div class="p-6 text-white md:grid bg-accent-black md:grid-cols-2 md:p-12 xl:grid-cols-4">
     <!-- Company -->
     <div class="flex flex-col mt-16">
         <app-subsections-headers [title]="'Company'"></app-subsections-headers>
@@ -110,21 +110,23 @@
         </div>
     </div>
     
-    <hr class="mt-12 md:col-span-2 opacity-15">
+    <hr class="mt-12 md:col-span-2 opacity-15 xl:col-span-4">
     
     <!-- Copiright -->
-    <div class="mt-8 md:col-span-2">
-        <p class="leading-6 text-center font-nunito">
-            <fa-icon [icon]="iconsService.faCopyright" class="mr-1"></fa-icon>
-            <a href="/home" class="inline-block underline underline-offset-4">Your Site Name</a>
-            , All Right Reserved. Designed By
-            <a href="https://htmlcodex.com" class="underline underline-offset-4">HTML Codex</a>
-        </p>
-        <p class="mt-6 text-center font-nunito">
-            Distribuited By 
-            <a href="https://themewagon.com" class="underline underline-offset-4">ThemeWagon</a>
-        </p>
-        <ul class="flex items-center justify-center mx-2 mt-4 list-none">
+    <div class="mt-8 md:col-span-2 xl:col-span-4 xl:flex xl:justify-between xl:items-stretch">
+        <div class="">
+            <p class="leading-6 text-center font-nunito xl:text-left xl:leading-none">
+                <fa-icon [icon]="iconsService.faCopyright" class="mr-1"></fa-icon>
+                <a href="/home" class="inline-block underline underline-offset-4">Your Site Name</a>
+                , All Right Reserved. Designed By
+                <a href="https://htmlcodex.com" class="underline underline-offset-4">HTML Codex</a>
+            </p>
+            <p class="mt-6 text-center font-nunito xl:text-left xl:mt-2">
+                Distribuited By 
+                <a href="https://themewagon.com" class="underline underline-offset-4">ThemeWagon</a>
+            </p>
+        </div>
+        <ul class="flex items-center justify-center mx-2 mt-4 list-none xl:mt-0">
             <li class="px-2">
                 <a href="/home" class="pr-4 border-r">Home</a>
             </li>
