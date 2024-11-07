@@ -17,7 +17,11 @@ module.exports = {
       },
       boxShadow: {
         'custom': '0 0 25px rgba(0, 0, 0, 0.1)',
-      }
+      },
+      screens: {
+        md: '575px',
+        lg: '991px'
+      },
     },
   },
   plugins: [],
