@@ -1,5 +1,5 @@
 <section class="grid gap-6 m-6 md:grid-cols-2 lg:grid-cols-4">
-    <div #teamCards *ngFor="let teamMember of teamCardService.TeamCards" 
+    <div #teamCards *ngFor="let teamMember of teamCardService.teamCards | slice:0:numberOfCards" 
     class="flex flex-col items-center gap-2 p-8 cursor-pointer group shadow-custom card-active transition-fade-effect md:mb-12">
         <div class="overflow-hidden rounded-full">
             <img src="{{teamMember.imgUrl}}" alt="">

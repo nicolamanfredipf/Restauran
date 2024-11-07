@@ -20,7 +20,7 @@ export class TeamCardService {
     ];
   }
 
-  get TeamCards(){
+  get teamCards(){
     return this._teamCards;
   }
 }

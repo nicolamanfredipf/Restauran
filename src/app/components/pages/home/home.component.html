@@ -10,15 +10,19 @@
         </div>
     </div>
 </div>
-<app-service-cards></app-service-cards>
-<app-about-images></app-about-images>
-<app-about-us></app-about-us>
+<app-service-cards [numberOfCards]="4"></app-service-cards>
+<div class="lg:grid lg:grid-cols-2">
+    <app-about-images></app-about-images>
+    <app-about-us></app-about-us>
+</div>
 <app-sections-headers [title]="'Most Popular Items'" [lable]="'Food Menu'"></app-sections-headers>
 <app-menu-popular></app-menu-popular>
-<app-booking-video></app-booking-video>
-<app-booking-reservation></app-booking-reservation>
+<div class="lg:grid lg:grid-cols-2">
+    <app-booking-video></app-booking-video>
+    <app-booking-reservation></app-booking-reservation>
+</div>
 <app-sections-headers [title]="'Our Master Chefs'" [lable]="'Team Members'"></app-sections-headers>
-<app-team-cards></app-team-cards>
+<app-team-cards [numberOfCards]="4"></app-team-cards>
 <app-sections-headers [title]="'Our Clients Say!!!'" [lable]="'Testimonial'"></app-sections-headers>
 <app-testimonails-cards></app-testimonails-cards>
 

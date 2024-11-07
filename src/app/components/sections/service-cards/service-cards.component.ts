@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, OnInit, QueryList, ViewChildren } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, Input, OnInit, QueryList, ViewChildren } from '@angular/core';
 import { AnimationsService } from 'src/app/services/utils/animations.service';
 import { IconsService } from 'src/app/services/utils/icons.service';
 import ServiceCardService from 'src/app/services/data/serviceCard.service';
@@ -9,8 +9,10 @@ import ServiceCardService from 'src/app/services/data/serviceCard.service';
   styleUrls: ['./service-cards.component.css']
 })
 export class ServiceCardsComponent implements AfterViewInit{
-  activeCardIndex: number = -1;
   @ViewChildren('serviceCards') serviceCards!: QueryList<ElementRef>;
+  @Input('numberOfCards') numberOfCards:number = this.servicesService.serviceCards.length;
+  activeCardIndex: number = -1;
+
   
   constructor(public iconsService:IconsService, public servicesService:ServiceCardService,public animationsService:AnimationsService){}
   
