@@ -1,10 +1,23 @@
-<section class="grid gap-6 m-6 md:grid-cols-2">
+<section class="grid gap-6 m-6 md:grid-cols-2 lg:grid-cols-4">
     <div #teamCards *ngFor="let teamMember of teamCardService.TeamCards" 
-    class="flex flex-col items-center gap-2 p-8 cursor-pointer shadow-custom card-active transition-fade-effect md:mb-12">
+    class="flex flex-col items-center gap-2 p-8 cursor-pointer group shadow-custom card-active transition-fade-effect md:mb-12">
         <div class="overflow-hidden rounded-full">
             <img src="{{teamMember.imgUrl}}" alt="">
         </div>
         <h5 class="text-2xl font-bold font font-nunito">{{teamMember.fullName}}</h5>
         <p>{{teamMember.designation}}</p>
+        
+        <!-- TODO: fixare il problema che vanno tutte giu -->
+        <div class="hidden lg:group-hover:flex lg:gap-2">
+            <div class="px-3 py-2 bg-accent-orange rounded-t-2xl">
+                <fa-icon [icon]="iconsService.faArrowUp"></fa-icon>
+            </div>
+            <div class="px-3 py-2 bg-accent-orange rounded-t-2xl">
+                <fa-icon [icon]="iconsService.faArrowUp"></fa-icon>
+            </div>
+            <div class="px-3 py-2 bg-accent-orange rounded-t-2xl">
+                <fa-icon [icon]="iconsService.faArrowUp"></fa-icon>
+            </div>
+        </div>
     </div>
 </section>
