@@ -8,17 +8,5 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'Restauran';
-  
-  topButtonvisibility:boolean = false;
-  navOnTop:boolean = true;
-  
-  manageTopButton(visibility:boolean){
-      this.topButtonvisibility = visibility;
-  }
-
-  manageNavbar(navIsAtTop:boolean){
-    console.log(navIsAtTop)
-    this.navOnTop = navIsAtTop;
-  }
 
 }

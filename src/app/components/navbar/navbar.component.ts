@@ -8,7 +8,6 @@ import { IconsService } from 'src/app/services/utils/icons.service';
 })
 export class NavbarComponent {
   @ViewChild('navbar', { static: true }) navbar!: ElementRef;
-  @Output() navbarVisibilityChange = new EventEmitter<boolean>();
   
   isContextMenuOpen: boolean = false;
   isPagesDropdownOpen: boolean = false;
@@ -16,24 +15,6 @@ export class NavbarComponent {
   isScreenLarge:boolean = window.innerWidth > 1280; 
 
   constructor(public iconsService:IconsService){}
-  
-  ngOnInit() {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach(entry => {
-          // console.log(entry.isIntersecting)
-          this.navbarVisibilityChange.emit(!entry.isIntersecting);
-        });
-      },
-      {
-        threshold: 0
-      }
-    );
-    
-    if (this.navbar) {
-      observer.observe(this.navbar.nativeElement);
-    }
-  }
 
   @HostListener('window:scroll', [])
   onWindowScroll() {

@@ -1,6 +1,6 @@
 import { AnimationsService } from './../../services/utils/animations.service';
 import { IconsService } from './../../services/utils/icons.service';
-import { AfterViewInit, Component, ElementRef, Input, OnChanges, OnDestroy, QueryList, ViewChild, ViewChildren } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, HostListener, Input, OnChanges, OnDestroy, QueryList, ViewChild, ViewChildren } from '@angular/core';
 
 @Component({
   selector: 'app-top-button',
@@ -9,6 +9,8 @@ import { AfterViewInit, Component, ElementRef, Input, OnChanges, OnDestroy, Quer
 })
 export class TopButtonComponent implements AfterViewInit {
   @ViewChildren('topButton') topButton!:QueryList<ElementRef>;
+
+  isOnTop:boolean = window.scrollY === 0;
   
   constructor(public iconsService:IconsService, public animationsService:AnimationsService){}
   
@@ -18,6 +20,11 @@ export class TopButtonComponent implements AfterViewInit {
       nativeElement.classList.remove('animate__animated', 'animate__fadeOut');
       nativeElement.classList.add('animate__animated','animate__fadeIn');
     });
+  }
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    this.isOnTop = window.scrollY === 0;
   }
 
   goTop(): void {
