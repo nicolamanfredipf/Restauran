@@ -1,6 +1,6 @@
 <nav #navbar 
 class="flex flex-wrap items-center justify-between w-full px-6 py-4 bg-accent-black min-h-16 text-accent-white xl:flex-nowrap xl:z-50"
-[ngClass]="{'xl:fixed xl:top-0':!isAtTop, 'bg-transparent xl:absolute xl:w-2/3 translate-x-[25%]':isAtTop}">
+[ngClass]="{'xl:fixed xl:top-0':!isAtTop, 'xl:bg-transparent xl:absolute xl:w-2/3 xl:translate-x-[25%]':isAtTop}">
 <h1 class="text-3xl xl:w-1/4">
     <a [routerLink]="['']" routerLinkActive="router-link-active" class="font-extrabold text-accent-orange font-nunito">
         <fa-icon [icon]="iconsService.faUtensils" class="mr-2.5"></fa-icon>
