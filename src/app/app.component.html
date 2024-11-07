@@ -1,4 +1,6 @@
 <app-navbar (navbarVisibilityChange)="manageTopButton($event)"></app-navbar>
+<div class="lg:mx-64 lg:flex lg:justify-center lg:items-center bg-accent-white">
 <router-outlet></router-outlet>
+</div>
 <app-top-button *ngIf="topButtonvisibility"></app-top-button>
 <app-footer></app-footer>
