@@ -1,54 +1,58 @@
-<nav #navbar class="flex flex-wrap items-center justify-between w-full px-6 py-4 bg-accent-black min-h-16 text-accent-white">
-    <h1 class="text-3xl">
-        <a [routerLink]="['']" routerLinkActive="router-link-active" class="font-extrabold text-accent-orange font-nunito">
-            <fa-icon [icon]="iconsService.faUtensils" class="mr-2.5"></fa-icon>
-            Restoran
-        </a>
-    </h1>
-    <button class="px-3 py-1 border border-white border-opacity-10"
-    (click)="toggleMenu()">
-        <fa-icon [icon]="iconsService.faBars" class="font-extrabold text-white opacity-55"></fa-icon>
-    </button>
-    <ul *ngIf="isContextMenuOpen" class="w-full pt-2 font-medium">
-        <li class="py-2.5 border-t border-white border-opacity-10">
-            <a [routerLink]="'/home'" routerLinkActive="text-accent-orange" (click)="toggleMenu()">HOME</a>
+<nav #navbar 
+class="flex flex-wrap items-center justify-between w-full px-6 py-4 bg-accent-black min-h-16 text-accent-white xl:flex-nowrap xl:z-50"
+[ngClass]="{'xl:fixed xl:top-0':!isAtTop, 'bg-transparent xl:absolute xl:w-2/3 translate-x-[25%]':isAtTop}">
+<h1 class="text-3xl xl:w-1/4">
+    <a [routerLink]="['']" routerLinkActive="router-link-active" class="font-extrabold text-accent-orange font-nunito">
+        <fa-icon [icon]="iconsService.faUtensils" class="mr-2.5"></fa-icon>
+        Restoran
+    </a>
+</h1>
+<button class="px-3 py-1 border border-white border-opacity-10 xl:hidden"
+(click)="toggleMenu()">
+<fa-icon [icon]="iconsService.faBars" class="font-extrabold text-white opacity-55"></fa-icon>
+</button>
+<ul
+class="w-full pt-2 font-medium xl:flex xl:gap-6 xl:items-center xl:justify-end"
+[ngClass]="{'hidden':!isContextMenuOpen}">
+    <li class="py-2.5 border-t border-white border-opacity-10 xl:border-none">
+        <a [routerLink]="'/home'" routerLinkActive="text-accent-orange" (click)="toggleMenu()">HOME</a>
+    </li>
+    <li class="py-2.5">
+        <a [routerLink]="'/about'" routerLinkActive="text-accent-orange" (click)="toggleMenu()">ABOUT</a>
+    </li>
+    <li class="py-2.5">
+        <a [routerLink]="'/service'" routerLinkActive="text-accent-orange" (click)="toggleMenu()">SERVICE</a>
+    </li>
+    <li class="py-2.5">
+        <a [routerLink]="'/menu'" routerLinkActive="text-accent-orange" (click)="toggleMenu()">MENU</a>
+    </li>
+    <li class="py-2.5">
+        <a [routerLink]="'#'" routerLinkActive="text-accent-orange"
+        (click)="togglePagesDropdown()">
+        PAGES
+        <fa-icon [icon]="iconsService.faCaretDown" class="text-sm"></fa-icon>
+    </a>
+</li>
+<li *ngIf="isPagesDropdownOpen" class="py-2.5 font-normal w-full">
+    <ul class="w-full py-2 list-none bg-white text-nav-dropdown-black-text">
+        <li class="w-full px-4 py-1" routerLinkActive="bg-accent-orange text-white" >
+            <a [routerLink]="'/booking'" (click)="toggleMenu()">Booking</a>
         </li>
-        <li class="py-2.5">
-            <a [routerLink]="'/about'" routerLinkActive="text-accent-orange" (click)="toggleMenu()">ABOUT</a>
+        <li class="px-4 py-1" routerLinkActive="bg-accent-orange text-white">
+            <a [routerLink]="'/team'" (click)="toggleMenu()">Our Team</a>
         </li>
-        <li class="py-2.5">
-            <a [routerLink]="'/service'" routerLinkActive="text-accent-orange" (click)="toggleMenu()">SERVICE</a>
-        </li>
-        <li class="py-2.5">
-            <a [routerLink]="'/menu'" routerLinkActive="text-accent-orange" (click)="toggleMenu()">MENU</a>
-        </li>
-        <li class="py-2.5">
-            <a [routerLink]="'#'" routerLinkActive="text-accent-orange"
-            (click)="togglePagesDropdown()">
-                PAGES
-                <fa-icon [icon]="iconsService.faCaretDown" class="text-sm"></fa-icon>
-            </a>
-        </li>
-        <li *ngIf="isPagesDropdownOpen" class="py-2.5 font-normal w-full">
-            <ul class="w-full py-2 list-none bg-white text-nav-dropdown-black-text">
-                <li class="w-full px-4 py-1" routerLinkActive="bg-accent-orange text-white" >
-                    <a [routerLink]="'/booking'" (click)="toggleMenu()">Booking</a>
-                </li>
-                <li class="px-4 py-1" routerLinkActive="bg-accent-orange text-white">
-                    <a [routerLink]="'/team'" (click)="toggleMenu()">Our Team</a>
-                </li>
-                <li class="px-4 py-1" routerLinkActive="bg-accent-orange text-white">
-                    <a [routerLink]="'/testimonial'" (click)="toggleMenu()">Testimonial</a>
-                </li>
-            </ul>
-        </li>
-        <li class="py-2.5">
-            <a [routerLink]="'/contact'" routerLinkActive="text-accent-orange" (click)="toggleMenu()">CONTACT</a>
-        </li>
-        <li class="py-2.5">
-            <a [routerLink]="'/booking'" (click)="toggleMenu()">
-            <button class="action-button">BOOK A TABLE</button>
-        </a>
+        <li class="px-4 py-1" routerLinkActive="bg-accent-orange text-white">
+            <a [routerLink]="'/testimonial'" (click)="toggleMenu()">Testimonial</a>
         </li>
     </ul>
+</li>
+<li class="py-2.5">
+    <a [routerLink]="'/contact'" routerLinkActive="text-accent-orange" (click)="toggleMenu()">CONTACT</a>
+</li>
+<li class="py-2.5">
+    <a [routerLink]="'/booking'" (click)="toggleMenu()">
+        <button class="action-button">BOOK A TABLE</button>
+    </a>
+</li>
+</ul>
 </nav>

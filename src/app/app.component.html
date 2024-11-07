@@ -1,5 +1,5 @@
-    <main class="xl:absolute xl:w-9/12 bg-white xl:left-[50%] xl:translate-x-[-50%] z-10">
-        <app-navbar (navbarVisibilityChange)="manageTopButton($event)"></app-navbar>
+<app-navbar (navbarVisibilityChange)="manageTopButton($event)"></app-navbar>
+<main class="xl:absolute xl:w-9/12 bg-white xl:left-[50%] xl:translate-x-[-50%] z-10">
         <router-outlet></router-outlet>
         <app-top-button *ngIf="topButtonvisibility"></app-top-button>
         <app-footer></app-footer>
