@@ -1,13 +1,3 @@
-.card-active{
-    color: #F1F8FF !important;
-    background-color: #FEA116 !important;
-}
-
-.card-active:active{
-    color: #F1F8FF !important;
-    background-color: #FEA116 !important;
-}
-
 .transition-fade-effect{
     transition: background-color 0.5s, color 0.5s; 
 }

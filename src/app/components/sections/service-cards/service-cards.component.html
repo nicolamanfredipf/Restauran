@@ -1,12 +1,12 @@
 <section class="grid gap-6 m-6 md:grid-cols-2 md:p-12 xl:grid-cols-4">
     <!-- TODO: finire di impazzire con il colore dell'icona -->
     <div #serviceCards *ngFor="let service of servicesService.serviceCards | slice:0:numberOfCards; let i = index"
-    class="flex flex-col items-start row-span-1 gap-2 p-8 cursor-pointer shadow-custom card-active transition-fade-effect "
+    class="flex flex-col items-start row-span-1 gap-2 p-8 cursor-pointer hover:text-white shadow-custom transition-fade-effect hover:bg-accent-orange"
     (click)="setActiveCard(i)"
-    [ngClass]="{'card-active' : i === activeCardIndex}">
+    [ngClass]="{'bg-accent-orange text-white' : i === activeCardIndex}">
         <fa-icon [icon]="iconsService.getFromName(service.iconName)" 
-        class="mb-2 text-5xl text-accent-orange"
-        [ngClass]="{'text-accent-white transition-fade-effect' : i === activeCardIndex, 'text-accent-orange' : i != activeCardIndex}">
+        class="mb-2 text-5xl transition-fade-effect text-accent-orange"
+        [ngClass]="{'text-accent-white ' : i === activeCardIndex}">
         ></fa-icon>
         <h5 class="text-2xl font-bold font font-nunito">{{service.title}}</h5>
         <p>{{service.description}}</p>
